@@ -1,6 +1,6 @@
 import calendar
 import datetime
-from test import send_notification
+from test import send_email
 
 
 class Budgetter:
@@ -17,7 +17,7 @@ class Budgetter:
 
     def calculate_budget(self, salary, transport):
         main_savings = salary * 0.25
-        rent_savings = salary * 0.10
+        rent_savings = salary * 0.15
         pocket_money = salary * 0.25
         clothing = salary * 0.10
 
@@ -58,7 +58,9 @@ def main():
     message = f"Dear Eugene,\nThis is your budget breakdown for the month:\n1. Transport Fare: {budget['lorry_fare']} cedis\n2. Main Savings: {budget['main_savings']} cedis\n3. Savings towards Rent: {budget['rent_savings']} cedis\n4. Pocket money for the month: {budget['pocket_money']} cedis\n5. Clothing: {budget['clothing']} cedis\nRemaining amount: {budget['remaining']}"
 
 
-    send_notification(recipient="0209414099", message=message)
+    # send_notification(recipient="0209414099", message=message)
+    send_email("paakwesinunoo135@gmail.com",message)
+    
 
 
 if __name__ == "__main__":
