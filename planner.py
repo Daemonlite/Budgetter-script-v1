@@ -17,8 +17,8 @@ class Budgetter:
 
     def calculate_budget(self, salary, transport):
         main_savings = salary * 0.25
-        rent_savings = salary * 0.15
-        pocket_money = salary * 0.25
+        rent_savings = salary * 0.10
+        pocket_money = salary * 0.30
         clothing = salary * 0.10
 
         budget = salary - main_savings - rent_savings - pocket_money - clothing
